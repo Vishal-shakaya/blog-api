@@ -4,7 +4,6 @@ from django.utils.text import slugify
 from django.db.models.signals import pre_save
 from django.conf import settings
 from django.utils import timezone
-# Create your models here.
 
 # def upload_location(instance, filename):
 #     return "%s/%s" %(instance.pk, filename)
@@ -31,7 +30,8 @@ class post(models.Model):
     
     def post_publish(self):
         self.publish = timezone.now()
-        self.save()    
+        self.save()
+
 
 
 def create_slug(instance , new_slug=None):

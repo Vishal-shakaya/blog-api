@@ -1,7 +1,10 @@
 
 {% extends "base.html" %}
-
+{% block animation %}
+<div class="button"><a class="show" href="#">feelsafe</a></div>
+{% endblock animation %}
 {% block navbar %}
+
 <div class="login-center-signup">
   <div class="container">
     <div class="col-5">
@@ -17,7 +20,13 @@
     <p class="h4 text-center py-4 ">Sign up</p>
     {% if form.errors %}
     <div class="alert alert-dismissible fade show" role="alert">
-        <p class=" alert-danger text-sm-center z-depth-1 rounded-sm">invalid username or passowrd</p>
+        <p class=" alert-danger text-sm-center z-depth-1 rounded-sm">invalid username or passowrd </p>
+             {% for field in form %}
+             {% if  field.help_text %}
+              {{ field.help_text }} 
+             
+             {% endif %}
+          {% endfor %}
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span class="text-danger" aria-hidden="true">&times;</span>
         </button>

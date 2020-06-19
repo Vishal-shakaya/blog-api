@@ -22,6 +22,3 @@ class Comment(models.Model):
 
 	def __str__(self):
 		return self.user.username
-
-	# def get_absolute_url(self):
-	#     return reverse("Post:detail", kwargs={"pk": self.pk})  

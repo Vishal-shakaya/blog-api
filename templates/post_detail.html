@@ -25,7 +25,7 @@
         </div>
 
         <div class="">
-        <a href="https://www.facebook.com/sharer/sharer.php?u= {{request.build_absolute_uri}}"class="button btn-floating btn-lg btn-fb" type="button" role="button"><i class="fab fa-facebook-f "></i></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u= {{request.build_absolute_uri}}"class=" btn-floating btn-lg btn-fb" type="button" role="button"><i class="fab fa-facebook-f "></i></a>
 
         <a href="https://twitter.com/home?status=I'{{post.content|urlshr}} {{request.build_absolute_uri}}"class="btn-floating btn-lg btn-tw" type="button" role="button"><i class="fab fa-twitter"></i></a>
 
@@ -59,11 +59,11 @@
   <div class=" col-lg-6  border-0 border-danger">
  
         {% for comments in post.comments.all%}
-           <div class=" border-faded border-dark">
-             <p class="text-default ">{{comments.user}} <small class="text-black-50">{{comments.date|date}}</small></p>
-           </div>
-          <div class="alert z-depth-1 col-sm-6">
-            <p class="text-lowercase">{{comments.content}}</p>
+              <div class="alert col-sm-6 z-depth-2">
+             <p class="text-info ">{{comments.user}} <small class="text-black-50">{{comments.date|date}}</small></p>
+          
+         
+            <p class="text-lowercase ">{{comments.content}}</p>
           
           </div>
 
